@@ -1,21 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>38 All Day Bar</title>
-<style>
-body {font-family: Arial; margin: 30px;}
-h1 {text-align:center;}
-.item {display:flex; justify-content:space-between; margin:8px 0;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38 All Day Bar</title>
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000; /* Pure black background */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Large Background Logo */
+        .bg-logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+            opacity: 0.15; /* Subdued background effect */
+            z-index: -1;
+            filter: grayscale(100%);
+        }
+
+        /* Main Glass Card */
+        .card {
+            background: rgba(30, 30, 30, 0.85); /* Dark grey semi-transparent */
+            backdrop-filter: blur(15px); /* Frosty glass effect */
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+        }
+
+        /* Small Logo inside card */
+        .card-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #d4af37; /* Gold accent to match logo */
+        }
+
+        .info-section {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+            font-weight: 300;
+        }
+
+        .wifi-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .menu-placeholder {
+            font-style: italic;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .card { padding: 25px; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
 
-<h1>38 All Day Bar</h1>
+    <img src="logo.jpg" alt="Background Logo" class="bg-logo">
 
-<h2>Coming soon.</h2>
-<p>Working Hours:</p>
-<p>From 09:00 to last customer!</p>
+    <div class="card">
+        <img src="logo.jpg" alt="38 All Day Bar Logo" class="card-logo">
+        
+        <h1>38 All Day Bar</h1>
+
+        <div class="info-section">
+            <h2>Working Hours</h2>
+            <p>Monday - Thursday: 08:00 - 00:00</p>
+            <p>Friday - Saturday: 08:00 - 02:00</p>
+            <p>Sunday: 09:00 - 23:00</p>
+        </div>
+
+        <div class="info-section">
+            <h2>Guest Wi-Fi</h2>
+            <div class="wifi-box">
+                <p><strong>SSID:</strong> 38_AllDayBar_Guest</p>
+                <p><strong>Password:</strong> [PLACEHOLDER_PASS]</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>Menu & Prices</h2>
+            <p class="menu-placeholder">Digital menu coming soon.</p>
+        </div>
+    </div>
+
 </body>
 </html>
