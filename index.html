@@ -282,19 +282,6 @@
             transform: translateY(-3px);
         }
 
-        /* Category Decorative SVGs */
-        .category-decor {
-            position: absolute;
-            opacity: 0.12;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .menu-category > *:not(.category-decor):not(.back-to-top) {
-            position: relative;
-            z-index: 1;
-        }
-
         /* Mobile Carousel Styles */
         @media (max-width: 480px) {
             .card { padding: 40px 25px; }
@@ -326,10 +313,6 @@
 
             .menu-category.active {
                 display: block;
-            }
-
-            .category-decor { 
-                display: none; 
             }
 
             .back-to-top,
@@ -410,14 +393,6 @@
                 <div class="menu-category active" id="coffee" data-index="0">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="right: 15px; top: 5px;" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 30H60V60C60 68 50 75 37.5 75C25 75 15 68 15 60V30Z" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <path d="M60 35H68C72 35 75 40 75 45C75 50 72 55 68 55H60" stroke="#d4af37" stroke-width="2" fill="none"/>
-                        <path d="M25 20C25 15 25 10 30 8" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                        <path d="M37 18C37 13 37 8 42 6" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                        <path d="M49 20C49 15 49 10 54 8" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                        <ellipse cx="37.5" cy="30" rx="22" ry="3" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                    </svg>
                     <h3><span>☕</span> ΚΑΦΕΔΕΣ</h3>
                     <div class="menu-item"><span class="item-name">espresso μονό</span><span class="item-price">2,50€</span></div>
                     <div class="menu-item"><span class="item-name">espresso διπλό</span><span class="item-price">3,00€</span></div>
@@ -438,13 +413,6 @@
                 <div class="menu-category" id="beverages" data-index="1">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="left: 15px; top: 5px;" width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 25H55V50C55 58 45 65 32.5 65C20 65 10 58 10 50V25Z" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <path d="M55 30H62C66 30 70 35 70 40C70 45 66 50 62 50H55" stroke="#d4af37" stroke-width="2" fill="none"/>
-                        <path d="M20 15C18 10 22 5 28 8C34 11 30 18 25 15" stroke="#d4af37" stroke-width="1.5" fill="none" opacity="0.5"/>
-                        <path d="M32 13C30 8 34 3 40 6C46 9 42 16 37 13" stroke="#d4af37" stroke-width="1.5" fill="none" opacity="0.5"/>
-                        <ellipse cx="32.5" cy="25" rx="22" ry="3" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                    </svg>
                     <h3><span>✨</span> ΡΟΦΗΜΑΤΑ</h3>
                     <div class="menu-item"><span class="item-name">Σοκολάτα (Ζεστή/Κρύα)</span><span class="item-price">4,00€</span></div>
                     <div class="menu-item"><span class="item-name">Τσάι / Χαμομήλι</span><span class="item-price">3,00€</span></div>
@@ -455,12 +423,6 @@
                 <div class="menu-category" id="juices" data-index="2">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="right: 15px; top: 5px;" width="60" height="90" viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 15L20 75C20 80 40 80 40 75L45 15" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <ellipse cx="30" cy="15" rx="15" ry="4" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                        <path d="M30 5L30 0" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
-                        <circle cx="30" cy="4" r="3" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.2)"/>
-                    </svg>
                     <h3><span>🍊</span> ΧΥΜΟΙ</h3>
                     <div class="menu-item"><span class="item-name">Χυμοί (Διάφορες γεύσεις)</span><span class="item-price">3,00€</span></div>
                     <div class="menu-item"><span class="item-name">Φυσικός χυμός Πορτοκάλι</span><span class="item-price">5,00€</span></div>
@@ -471,11 +433,6 @@
                 <div class="menu-category" id="soft-drinks" data-index="3">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="left: 15px; top: 5px;" width="55" height="85" viewBox="0 0 55 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="12" y="10" width="30" height="60" rx="3" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <ellipse cx="27" cy="10" rx="15" ry="3" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                        <path d="M27 2L27 0" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
                     <h3><span>🥤</span> ΑΝΑΨΥΚΤΙΚΑ</h3>
                     <div class="menu-item"><span class="item-name">Pepsi 250ml</span><span class="item-price">3,00€</span></div>
                     <div class="menu-item"><span class="item-name">Πορτοκαλάδα 250ml</span><span class="item-price">3,00€</span></div>
@@ -493,11 +450,6 @@
                 <div class="menu-category" id="beers" data-index="4">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="right: 15px; top: 5px;" width="80" height="90" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 20H55V70C55 78 45 85 32.5 85C20 85 10 78 10 70V20Z" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <path d="M55 25H65C70 25 75 32 75 40C75 48 70 55 65 55H55" stroke="#d4af37" stroke-width="2" fill="none"/>
-                        <ellipse cx="32.5" cy="20" rx="22" ry="4" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                    </svg>
                     <h3><span>🍺</span> ΜΠΥΡΕΣ</h3>
                     <div class="menu-item"><span class="item-name">Carlsberg 330ml</span><span class="item-price">3,50€</span></div>
                     <div class="menu-item"><span class="item-name">Mythos 330ml</span><span class="item-price">3,50€</span></div>
@@ -516,12 +468,6 @@
                 <div class="menu-category" id="wines" data-index="5">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="left: 15px; top: 5px;" width="60" height="100" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 10C10 10 8 40 30 40C52 40 50 10 50 10" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <ellipse cx="30" cy="10" rx="20" ry="5" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                        <line x1="30" y1="40" x2="30" y2="80" stroke="#d4af37" stroke-width="2"/>
-                        <ellipse cx="30" cy="85" rx="18" ry="5" stroke="#d4af37" stroke-width="2" fill="none"/>
-                    </svg>
                     <h3><span>🍷</span> ΚΡΑΣΙΑ</h3>
                     <div class="menu-item"><span class="item-name">Λευκό 187ml</span><span class="item-price">4,00€</span></div>
                     <span class="price-detail">Φιάλη 750ml: 15,00€</span>
@@ -540,12 +486,6 @@
                 <div class="menu-category" id="drinks" data-index="6">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="right: 15px; top: 5px;" width="70" height="80" viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15L15 65C15 70 55 70 55 65L60 15" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <ellipse cx="35" cy="15" rx="25" ry="5" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                        <rect x="20" y="25" width="10" height="10" rx="2" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.15)" transform="rotate(10 25 30)"/>
-                        <rect x="38" y="28" width="8" height="8" rx="2" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.15)" transform="rotate(-15 42 32)"/>
-                    </svg>
                     <h3><span>🥃</span> ΠΟΤΑ</h3>
                     <div class="menu-item"><span class="item-name">Απλό</span><span class="item-price">6,00€</span></div>
                     <span class="price-detail">Φιάλη: 60,00€</span>
@@ -561,17 +501,6 @@
                 <div class="menu-category" id="cocktails" data-index="7">
                     <div class="corner-bl"></div>
                     <div class="corner-br"></div>
-                    <svg class="category-decor" style="left: 10px; bottom: 60px;" width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 5L45 55L85 5" stroke="#d4af37" stroke-width="2" fill="none"/>
-                        <path d="M10 8L45 50L80 8" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.08)"/>
-                        <line x1="45" y1="55" x2="45" y2="100" stroke="#d4af37" stroke-width="2"/>
-                        <ellipse cx="45" cy="105" rx="22" ry="5" stroke="#d4af37" stroke-width="2" fill="none"/>
-                    </svg>
-                    <svg class="category-decor" style="right: 10px; top: 15px;" width="60" height="100" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 25L22 80C22 85 38 85 38 80L42 25" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
-                        <ellipse cx="30" cy="25" rx="12" ry="3" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
-                        <rect x="22" y="10" width="16" height="15" rx="2" stroke="#d4af37" stroke-width="2" fill="none"/>
-                    </svg>
                     <h3><span>🍸</span> COCKTAILS</h3>
                     <div class="menu-item"><span class="item-name">Porn Star</span><span class="item-price">10,00€</span></div>
                     <div class="menu-item"><span class="item-name">Cosmopolitan</span><span class="item-price">10,00€</span></div>
