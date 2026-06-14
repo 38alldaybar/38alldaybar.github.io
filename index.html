@@ -119,62 +119,10 @@
             border: 1px solid rgba(212, 175, 55, 0.1);
         }
 
-        /* Menu Decorative Frame */
+        /* Menu Frame */
         .menu-frame {
             position: relative;
-            border: 2px solid var(--border);
-            border-radius: 20px;
-            padding: 35px 25px 50px 25px;
             margin-top: 15px;
-        }
-
-        .menu-frame::before,
-        .menu-frame::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--gold);
-        }
-
-        .menu-frame::before {
-            top: -6px;
-            left: -6px;
-            border-right: none;
-            border-bottom: none;
-            border-radius: 12px 0 0 0;
-        }
-
-        .menu-frame::after {
-            top: -6px;
-            right: -6px;
-            border-left: none;
-            border-bottom: none;
-            border-radius: 0 12px 0 0;
-        }
-
-        .menu-frame .corner-bl,
-        .menu-frame .corner-br {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--gold);
-        }
-
-        .menu-frame .corner-bl {
-            bottom: -6px;
-            left: -6px;
-            border-right: none;
-            border-top: none;
-            border-radius: 0 0 0 12px;
-        }
-
-        .menu-frame .corner-br {
-            bottom: -6px;
-            right: -6px;
-            border-left: none;
-            border-top: none;
-            border-radius: 0 0 12px 0;
         }
 
         /* Navigation Buttons */
@@ -226,6 +174,64 @@
             scroll-margin-top: 20px;
             position: relative;
             padding-bottom: 50px;
+        }
+
+        /* Category decorative frame - desktop only */
+        @media (min-width: 481px) {
+            .menu-category {
+                border: 2px solid var(--border);
+                border-radius: 20px;
+                padding: 25px 25px 50px 25px;
+            }
+
+            .menu-category::before,
+            .menu-category::after {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border: 2px solid var(--gold);
+            }
+
+            .menu-category::before {
+                top: -6px;
+                left: -6px;
+                border-right: none;
+                border-bottom: none;
+                border-radius: 10px 0 0 0;
+            }
+
+            .menu-category::after {
+                top: -6px;
+                right: -6px;
+                border-left: none;
+                border-bottom: none;
+                border-radius: 0 10px 0 0;
+            }
+
+            .menu-category .corner-bl,
+            .menu-category .corner-br {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border: 2px solid var(--gold);
+            }
+
+            .menu-category .corner-bl {
+                bottom: -6px;
+                left: -6px;
+                border-right: none;
+                border-top: none;
+                border-radius: 0 0 0 10px;
+            }
+
+            .menu-category .corner-br {
+                bottom: -6px;
+                right: -6px;
+                border-left: none;
+                border-top: none;
+                border-radius: 0 0 10px 0;
+            }
         }
 
         .menu-category h3 {
@@ -340,7 +346,7 @@
             .menu-category {
                 display: none;
                 margin-top: 20px;
-                padding-bottom: 60px;
+                padding-bottom: 20px;
             }
 
             .menu-category.active {
@@ -349,6 +355,12 @@
 
             .category-decor { 
                 display: none; 
+            }
+
+            .back-to-top,
+            .corner-bl,
+            .corner-br {
+                display: none !important;
             }
 
             /* Swipe hint */
@@ -405,8 +417,6 @@
             <h2>Menu & Prices</h2>
 
             <div class="menu-frame">
-                <div class="corner-bl"></div>
-                <div class="corner-br"></div>
 
                 <div class="menu-nav" id="menu-nav">
                     <a href="#coffee" class="nav-btn active" data-category="coffee">☕ ΚΑΦΕΔΕΣ</a>
@@ -423,6 +433,8 @@
                 
                 <!-- COFFEE -->
                 <div class="menu-category active" id="coffee" data-index="0">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="right: 15px; top: 5px;" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 30H60V60C60 68 50 75 37.5 75C25 75 15 68 15 60V30Z" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
                         <path d="M60 35H68C72 35 75 40 75 45C75 50 72 55 68 55H60" stroke="#d4af37" stroke-width="2" fill="none"/>
@@ -444,10 +456,13 @@
                     <div class="menu-item"><span class="item-name">Φίλτρου</span><span class="item-price">3,00€</span></div>
                     <div class="menu-item"><span class="item-name">Ελληνικός μονός</span><span class="item-price">2,50€</span></div>
                     <div class="menu-item"><span class="item-name">Ελληνικός διπλός</span><span class="item-price">3,00€</span></div>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
                 <!-- BEVERAGES -->
                 <div class="menu-category" id="beverages" data-index="1">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="left: 15px; top: 5px;" width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 25H55V50C55 58 45 65 32.5 65C20 65 10 58 10 50V25Z" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
                         <path d="M55 30H62C66 30 70 35 70 40C70 45 66 50 62 50H55" stroke="#d4af37" stroke-width="2" fill="none"/>
@@ -458,10 +473,13 @@
                     <h3><span>✨</span> ΡΟΦΗΜΑΤΑ</h3>
                     <div class="menu-item"><span class="item-name">Σοκολάτα (Ζεστή/Κρύα)</span><span class="item-price">4,00€</span></div>
                     <div class="menu-item"><span class="item-name">Τσάι / Χαμομήλι</span><span class="item-price">3,00€</span></div>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
                 <!-- JUICES -->
                 <div class="menu-category" id="juices" data-index="2">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="right: 15px; top: 5px;" width="60" height="90" viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 15L20 75C20 80 40 80 40 75L45 15" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
                         <ellipse cx="30" cy="15" rx="15" ry="4" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
@@ -471,10 +489,13 @@
                     <h3><span>🍊</span> ΧΥΜΟΙ</h3>
                     <div class="menu-item"><span class="item-name">Χυμοί (Διάφορες γεύσεις)</span><span class="item-price">3,00€</span></div>
                     <div class="menu-item"><span class="item-name">Φυσικός χυμός Πορτοκάλι</span><span class="item-price">5,00€</span></div>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
                 <!-- SOFT DRINKS -->
                 <div class="menu-category" id="soft-drinks" data-index="3">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="left: 15px; top: 5px;" width="55" height="85" viewBox="0 0 55 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="12" y="10" width="30" height="60" rx="3" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
                         <ellipse cx="27" cy="10" rx="15" ry="3" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
@@ -490,10 +511,13 @@
                     <div class="menu-item"><span class="item-name">Τσάι Ροδάκινο 330ml</span><span class="item-price">3,00€</span></div>
                     <div class="menu-item"><span class="item-name">Redbull 250ml</span><span class="item-price">3,50€</span></div>
                     <div class="menu-item"><span class="item-name">Pink soda 250ml</span><span class="item-price">3,00€</span></div>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
                 <!-- BEERS -->
                 <div class="menu-category" id="beers" data-index="4">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="right: 15px; top: 5px;" width="80" height="90" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 20H55V70C55 78 45 85 32.5 85C20 85 10 78 10 70V20Z" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
                         <path d="M55 25H65C70 25 75 32 75 40C75 48 70 55 65 55H55" stroke="#d4af37" stroke-width="2" fill="none"/>
@@ -510,10 +534,13 @@
                     <div class="menu-item"><span class="item-name">Βαρέλι 330ml</span><span class="item-price">3,50€</span></div>
                     <div class="menu-item"><span class="item-name">Βαρέλι 500ml</span><span class="item-price">5,00€</span></div>
                     <div class="menu-item"><span class="item-name">Βαρέλι 1lt</span><span class="item-price">10,00€</span></div>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
                 <!-- WINES -->
                 <div class="menu-category" id="wines" data-index="5">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="left: 15px; top: 5px;" width="60" height="100" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 10C10 10 8 40 30 40C52 40 50 10 50 10" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
                         <ellipse cx="30" cy="10" rx="20" ry="5" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
@@ -531,10 +558,13 @@
                     <span class="price-detail">Φιάλη 750ml: 15,00€</span>
                     <div class="menu-item"><span class="item-name">Moscato D'asti</span><span class="item-price">5,00€</span></div>
                     <span class="price-detail">Φιάλη 750ml: 40,00€</span>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
                 <!-- DRINKS -->
                 <div class="menu-category" id="drinks" data-index="6">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="right: 15px; top: 5px;" width="70" height="80" viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 15L15 65C15 70 55 70 55 65L60 15" stroke="#d4af37" stroke-width="2" fill="rgba(212,175,55,0.05)"/>
                         <ellipse cx="35" cy="15" rx="25" ry="5" stroke="#d4af37" stroke-width="1.5" fill="rgba(212,175,55,0.1)"/>
@@ -549,10 +579,13 @@
                     <div class="menu-item"><span class="item-name">Premium</span><span class="item-price">10,00€</span></div>
                     <span class="price-detail">Φιάλη: 120,00€</span>
                     <div class="menu-item"><span class="item-name">Cocktail</span><span class="item-price">10,00€</span></div>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
                 <!-- COCKTAILS -->
                 <div class="menu-category" id="cocktails" data-index="7">
+                    <div class="corner-bl"></div>
+                    <div class="corner-br"></div>
                     <svg class="category-decor" style="left: 10px; bottom: 60px;" width="90" height="120" viewBox="0 0 90 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 5L45 55L85 5" stroke="#d4af37" stroke-width="2" fill="none"/>
                         <path d="M10 8L45 50L80 8" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.08)"/>
@@ -580,6 +613,7 @@
                     <div class="menu-item"><span class="item-name">Old Fashioned</span><span class="item-price">10,00€</span></div>
                     <div class="menu-item"><span class="item-name">Spritz</span><span class="item-price">10,00€</span></div>
                     <div class="menu-item"><span class="item-name">Negroni</span><span class="item-price">10,00€</span></div>
+                    <a href="#menu-nav" class="back-to-top" title="Back to categories">↑</a>
                 </div>
 
             </div>
